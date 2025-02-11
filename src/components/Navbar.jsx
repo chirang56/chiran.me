@@ -5,13 +5,13 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
   }, [menuOpen]);
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="#home" className="font-mono text-xl font-bold bg-gradient-to-br from-blue-500 to-amber-700 text-transparent bg-clip-text">
+          <a href="#home" className="font-mono text-xl font-bold bg-gradient-to-br from-purple-500 to-emerald-300 text-transparent bg-clip-text">
               Chirang
             .
-            <span className="bg-gradient-to-br from-violet-800 to-rose-600 text-transparent bg-clip-text">
+            <span className="bg-gradient-to-br from-emerald-300 to-purple-500 text-transparent bg-clip-text">
               {" "}
               56{" "}
             </span>
