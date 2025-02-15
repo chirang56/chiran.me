@@ -6,7 +6,7 @@ const ProjectCard = ({ title, description, techStack, link }) => {
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-gray-400 mb-4">{description}</p>
 
-      <div>
+      <div className="flex flex-wrap gap-2 mb-4">
         {techStack.map((tech, key) => (
           <span
             key={key}
@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, techStack, link }) => {
         ))}
       </div>
       <div className="flex justify-between items-center">
-        <a href={link} className="text-blue-400 hover:text-blue-30 transition-colors my-4">
+        <a href={link} className="text-blue-400 hover:text-emerald-300 transition-colors my-4">
           View Project →
         </a>
       </div>
