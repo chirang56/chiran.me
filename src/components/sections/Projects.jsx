@@ -1,4 +1,4 @@
-// src/components/Projects.js
+// src/components/Projects.jsx
 const ProjectCard = ({ title, description, techStack, link }) => {
   return (
     <div className="rounded-xl p-6 border-white/10 border hover:-translate-y-1 
@@ -35,15 +35,15 @@ export const Projects = () => {
       link: "https://chirang56me.netlify.app/"
     },
     {
-      title: "Personal Portfolio",
-      description: "Personal Portfolio Website showcasing the all needed information for any company or person in order to consider for me to hire.",
-      techStack: ["HTML", "CSS", "Javascript"],
+      title: "E-commerce Website",
+      description: "Website for buying and selling products online. It has a user-friendly interface and a secure payment gateway.",
+      techStack: ["React.js", "Tailwind Css", "MySql", "Node.js", "Express.js", "Stripe", "Firebase"],
       link: "https://chirang56me.netlify.app/"
     },
     {
-      title: "Personal Portfolio",
-      description: "Personal Portfolio Website showcasing the all needed information for any company or person in order to consider for me to hire.",
-      techStack: ["HTML", "CSS", "Javascript"],
+      title: "Literature Based Website",
+      description: "Website for reading and writing literature. It has a user-friendly interface and a secure payment gateway.",
+      techStack: ["React.js", "Tailwind CSS", "MySql", "Node.js", "Express.js", "Stripe", "Firebase"],
       link: "https://chirang56me.netlify.app/"
     },
     // Add more projects here as needed
