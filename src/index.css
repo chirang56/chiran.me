@@ -1,11 +1,44 @@
 @import "tailwindcss";
 
+:root {
+  /* Light mode colors */
+  --background: #0b3305;
+  --background-secondary: #f9fbfa;
+  --text-primary: #ffffff;
+  --text-secondary: #98aadd;
+  --accent-primary: #3b82f6;
+  --accent-gradient-from: #8b5cf6;
+  --accent-gradient-to: #10b981;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --card-bg: #ffffff;
+  --input-bg: #f3f4f6;
+  --input-border: #d1d5db;
+  --navbar-bg: rgba(2, 88, 64, 0.8);
+}
+
+[data-theme="dark"] {
+  /* Dark mode colors */
+  --background: #0a0a0a;
+  --background-secondary: #111827;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-primary: #3b82f6;
+  --accent-gradient-from: #8b5cf6;
+  --accent-gradient-to: #10b981;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --card-bg: #1f2937;
+  --input-bg: #374151;
+  --input-border: #4b5563;
+  --navbar-bg: rgba(10, 10, 10, 0.8);
+}
+
 html, body {
   margin: 0;
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
-  background: #0a0a0a;
-  color: #f3f4f6;
+  background: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @layer utilities {
@@ -46,4 +79,16 @@ html, body {
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 
+ * Apply transitions to specific elements that need to change with theme
+ */
+nav, 
+.card, 
+button, 
+input, 
+textarea,
+.border {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
