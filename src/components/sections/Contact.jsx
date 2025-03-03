@@ -1,5 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import { Toaster, toast } from "react-hot-toast";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,10 +21,10 @@ export const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(() => {
-        alert("Message Sent!");
+        toast.success("Message Sent Successfully!");
         setFormData({ name: "", email: "", message: "" });
       })
-      .catch(() => alert("Oops! Something went wrong. Please try again."));
+      .catch(() => toast.error("Oops! Something went wrong. Please try again."));
   };
 
   return (
