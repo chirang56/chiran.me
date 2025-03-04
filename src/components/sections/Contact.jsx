@@ -119,7 +119,7 @@ export const Contact = () => {
             type="submit"
             className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-blue-900 hover:shadow-lg"
           >
-            <a href="#sendmessage"> Send Message </a>
+            Send Message
           </button>
         </form>
       </div>
