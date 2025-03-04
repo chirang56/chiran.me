@@ -32,12 +32,43 @@ export const Contact = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center py-20 w-full bg-black-900 text-white"
     >
+      <Toaster position="top-right" reverseOrder={false} />
       {/* Remove RevealOnScroll for Debugging */}
       <div className="w-full p-8 max-w-lg bg-black-500 rounded-lg shadow-lg border-white/10 border hover:-translate-y-1 hover:border-blue-500/30 transition-all">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-tr from-purple-500 
                 to-emerald-300 text-transparent bg-clip-text text-center">
           Get In Touch
         </h2>
+
+        {/* Social Media Links */}
+        <div className="flex justify-center gap-4 mb-6">
+          <a href="https://www.github.com/chirang56" target="_blank" rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-500 transition text-2xl">
+            <FaGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/chirang56/" target="_blank" rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-500 transition text-2xl">
+            <FaLinkedin />
+          </a>
+          <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer"
+            className="text-blue-300 hover:text-blue-400 transition text-2xl">
+            <FaTwitter />
+          </a>
+          <a href="https://www.facebook.com/cheerungb.gtm" target="_blank" rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-700 transition text-2xl">
+            <FaFacebook />
+          </a>
+          <a href="https://www.instagram.com/chirang560/" target="_blank" rel="noopener noreferrer"
+            className="text-pink-400 hover:text-pink-500 transition text-2xl">
+            <FaInstagram />
+          </a>
+          
+          <a href="https://wa.me/9867878405" target="_blank" rel="noopener noreferrer"
+            className="text-green-400 hover:text-green-500 transition text-2xl">
+            <FaWhatsapp />
+          </a>
+        </div>
+
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <input
@@ -86,9 +117,9 @@ export const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-lg"
+            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-blue-900 hover:shadow-lg"
           >
-            Send Message
+            <a href="#sendmessage"> Send Message </a>
           </button>
         </form>
       </div>
