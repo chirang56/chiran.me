@@ -25,10 +25,10 @@ export const Footer = () => {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition">
+            <a href="https://github.com/chirang56" target="_blank" rel="noopener noreferrer" className="text-xl text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition">
+            <a href="https://linkedin.com/in/chirang56" target="_blank" rel="noopener noreferrer" className="text-xl text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition">
               <FaLinkedin />
             </a>
             <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-xl text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition">
