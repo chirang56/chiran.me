@@ -10,8 +10,17 @@ export const Contact = () => {
     message: "",
   });
 
+  const isValidEmail = (email) => {
+    return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!isValidEmail(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -30,20 +39,18 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 w-full bg-black-900 text-white"
+      className="min-h-screen flex items-center justify-center py-20 w-full bg-[var(--background)] text-[var(--text-primary)]"
     >
       <Toaster position="top-right" reverseOrder={false} />
-      {/* Remove RevealOnScroll for Debugging */}
-      <div className="w-full p-8 max-w-lg bg-black-500 rounded-lg shadow-lg border-white/10 border hover:-translate-y-1 hover:border-blue-500/30 transition-all">
-        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-tr from-purple-500 
-                to-emerald-300 text-transparent bg-clip-text text-center">
+      <div className="w-full p-8 max-w-lg bg-[var(--card-bg)] rounded-lg shadow-lg border-[var(--border-color)] hover:-translate-y-1 hover:border-[var(--accent-primary)] transition-all">
+        <h2 className="text-3xl font-bold mb-8 bg-gradient-to-tr from-[var(--accent-gradient-from)] to-[var(--accent-gradient-to)] text-transparent bg-clip-text text-center">
           Get In Touch
         </h2>
 
         {/* Social Media Links */}
         <div className="flex justify-center gap-4 mb-6">
           <a href="https://www.github.com/chirang56" target="_blank" rel="noopener noreferrer"
-            className="text-gray-400 hover:text-gray-500 transition text-2xl">
+            className="text-[var(--text-secondary)] hover:text-[var(--accent-primary)] transition text-2xl">
             <FaGithub />
           </a>
           <a href="https://www.linkedin.com/in/chirang56/" target="_blank" rel="noopener noreferrer"
@@ -62,13 +69,13 @@ export const Contact = () => {
             className="text-pink-400 hover:text-pink-500 transition text-2xl">
             <FaInstagram />
           </a>
-          
           <a href="https://wa.me/9867878405" target="_blank" rel="noopener noreferrer"
             className="text-green-400 hover:text-green-500 transition text-2xl">
             <FaWhatsapp />
           </a>
         </div>
 
+        {/* Form Section */}
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <input
@@ -77,7 +84,7 @@ export const Contact = () => {
               name="name"
               required
               value={formData.name}
-              className="w-full bg-gray-700 border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
               placeholder="Your Name"
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
@@ -92,7 +99,7 @@ export const Contact = () => {
               name="email"
               required
               value={formData.email}
-              className="w-full bg-gray-700 border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
               placeholder="example@gmail.com"
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -107,7 +114,7 @@ export const Contact = () => {
               required
               rows={5}
               value={formData.message}
-              className="w-full bg-gray-700 border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
               placeholder="Your Message..."
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
@@ -117,7 +124,7 @@ export const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-blue-900 hover:shadow-lg"
+            className="w-full bg-[var(--accent-primary)] text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-[var(--accent-gradient-to)] hover:shadow-lg"
           >
             Send Message
           </button>
