@@ -11,9 +11,10 @@
   --accent-gradient-to: #10b981;
   --border-color: rgba(0, 0, 0, 0.1);
   --card-bg: #ffffff;
-  --input-bg: #f3f4f6;
-  --input-border: #d1d5db;
+  --input-bg: #374151;
+  --input-border: #4b5563;
   --navbar-bg: rgba(2, 88, 64, 0.8);
+  --placeholder-text: #9ca3af; /* Light mode placeholder color */
 }
 
 [data-theme="dark"] {
@@ -30,6 +31,7 @@
   --input-bg: #374151;
   --input-border: #4b5563;
   --navbar-bg: rgba(10, 10, 10, 0.8);
+  --placeholder-text: #9ca3af; /* Dark mode placeholder color */
 }
 
 html, body {
@@ -41,6 +43,42 @@ html, body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Apply transitions to specific elements that need to change with theme */
+nav, 
+.card, 
+button, 
+input, 
+textarea,
+.border {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover border effect */
+.hover-border-blue:hover {
+  border-color: rgba(37, 99, 235, 0.3); /* blue-500/30 */
+}
+
+/* Placeholder color for both light and dark modes */
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-text);
+}
+
+/* Input, Textarea and Form Elements */
+input, textarea {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--text-primary);
+  transition: border-color 0.3s ease;
+}
+
+/* Card and other elements */
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+/* Utility animations */
 @layer utilities {
   @keyframes blink {
     0%,
@@ -79,16 +117,4 @@ html, body {
 .reveal-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* 
- * Apply transitions to specific elements that need to change with theme
- */
-nav, 
-.card, 
-button, 
-input, 
-textarea,
-.border {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }

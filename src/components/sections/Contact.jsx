@@ -39,10 +39,12 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20 w-full bg-[var(--background)] text-[var(--text-primary)]"
+      className="min-h-screen flex items-center justify-center py-20 w-full bg-[var(--background)] text-[var(--text-primary)] transition-all"
     >
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="w-full p-8 max-w-lg bg-[var(--card-bg)] rounded-lg shadow-lg border-[var(--border-color)] hover:-translate-y-1 hover:border-[var(--accent-primary)] transition-all">
+      <div className="w-full p-8 max-w-lg rounded-lg shadow-lg border border-[var(--border-color)] hover:border-[var(--input-border)] transition-all
+        bg-[var(--navbar-bg)]"
+      >
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-tr from-[var(--accent-gradient-from)] to-[var(--accent-gradient-to)] text-transparent bg-clip-text text-center">
           Get In Touch
         </h2>
@@ -74,7 +76,7 @@ export const Contact = () => {
             <FaWhatsapp />
           </a>
         </div>
-
+        
         {/* Form Section */}
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
@@ -84,7 +86,7 @@ export const Contact = () => {
               name="name"
               required
               value={formData.name}
-              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] hover:border-blue transition"
               placeholder="Your Name"
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
@@ -99,7 +101,7 @@ export const Contact = () => {
               name="email"
               required
               value={formData.email}
-              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] hover:border-blue transition"
               placeholder="example@gmail.com"
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -114,7 +116,7 @@ export const Contact = () => {
               required
               rows={5}
               value={formData.message}
-              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] transition"
+              className="w-full bg-[var(--input-bg)] border border-[var(--input-border)] rounded px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-secondary)] focus:outline-none focus:ring-2 focus:ring-[var(--accent-primary)] hover:border-blue transition"
               placeholder="Your Message..."
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
@@ -124,7 +126,7 @@ export const Contact = () => {
 
           <button
             type="submit"
-            className="w-full bg-[var(--accent-primary)] text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-[var(--accent-gradient-to)] hover:shadow-lg"
+            className="w-full bg-[var(--accent-primary)] text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:bg-[var(--accent-gradient-to)] hover:shadow-lg hover:border-blue"
           >
             Send Message
           </button>
