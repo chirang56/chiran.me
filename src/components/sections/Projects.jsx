@@ -38,13 +38,13 @@ export const Projects = () => {
       title: "E-commerce Website",
       description: "Website for buying and selling products online. It has a user-friendly interface and a secure payment gateway.",
       techStack: ["React.js", "Tailwind Css", "MySql", "Node.js", "Express.js", "Stripe", "Firebase"],
-      link: "https://chirang56me.netlify.app/"
+      link: "https://matdash-frontend.vercel.app/"
     },
     {
-      title: "Literature Based Website",
-      description: "Website for reading and writing literature. It has a user-friendly interface and a secure payment gateway.",
-      techStack: ["React.js", "Tailwind CSS", "MySql", "Node.js", "Express.js", "Stripe", "Firebase"],
-      link: "https://chirang56me.netlify.app/"
+      title: "Gautam Steelworks",
+      description: "Website for Gautam Steelworks, a steel, aluminum, and fibre industry. It features a modern and responsive design with a clean user interface, showcasing products and services effectively. The website ensures fast performance, SEO optimization, and seamless navigation.",
+      techStack: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MySQL"],
+      link: "https://gautam-steelworks.vercel.app/en"
     },
     // Add more projects here as needed
   ];
