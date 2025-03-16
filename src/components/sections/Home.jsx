@@ -1,9 +1,10 @@
+import { RevealOnScroll } from "../../components/RevealOnScroll";
 import Logo from "../../assets/Logo.webp";
 
 export const Home = () => {
   return (
     <section id="home" className="flex flex-col items-center justify-center min-h-screen text-center px-4 relative">
-      
+      <RevealOnScroll>
       {/* Logo with Enhancements */}
       <div className="w-28 h-28 md:w-32 md:h-32 mb-4 relative">
         <img 
@@ -13,17 +14,23 @@ export const Home = () => {
           loading="lazy" 
         />
       </div>
+      </RevealOnScroll>
 
+      <RevealOnScroll>
       {/* Title with improved typography */}
       <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-br from-cyan-300 to-fuchsia-400 bg-clip-text text-transparent leading-tight md:leading-normal">
         Hi, I'm Chiranjibi Gautam!
       </h1>
+      </RevealOnScroll>
 
+      <RevealOnScroll>
       {/* Description with improved spacing */}
       <p className="bg-gradient-to-bl from-emerald-500 to-amber-600 bg-clip-text text-transparent text-lg mb-8 max-w-lg mx-auto leading-relaxed">
         I'm a full-stack developer who loves crafting clean & scalable web applications and mobile apps with a delightful user experience. I'm a part-time media translator and subtitler too.
       </p>
+      </RevealOnScroll>
 
+      <RevealOnScroll>
       {/* Buttons with transitions and improved styling */}
       <div className="flex justify-center space-x-4">
         <a 
@@ -42,6 +49,7 @@ export const Home = () => {
           Contact Me
         </a>
       </div>
+      </RevealOnScroll>
     </section>
   );
 };
