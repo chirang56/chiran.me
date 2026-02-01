@@ -1,8 +1,54 @@
-# React + Vite
+# Chiranjibi Gautam Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
+- Animated loading screen
+- Light/dark theme toggle
+- Responsive navigation and mobile menu
+- Projects, About, and Contact sections
+- EmailJS-powered contact form with validation and toast notifications
+- Accessibility and keyboard navigation support
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### Installation
+```bash
+npm install
+# or
+yarn install
+```
+
+### Development
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+### Build
+```bash
+npm run build
+# or
+yarn build
+```
+
+### Lint
+```bash
+npm run lint
+```
+
+## Environment Variables
+Create a `.env` file in the root and add your EmailJS credentials:
+```
+VITE_SERVICE_ID=your_service_id
+VITE_TEMPLATE_ID=your_template_id
+VITE_PUBLIC_KEY=your_public_key
+```
+
+## License
+MIT
