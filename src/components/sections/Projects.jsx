@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../../components/RevealOnScroll";
+import { PROJECTS } from "../../constants/projects";
 
 const ProjectCard = ({ title, description, techStack, link }) => {
   return (
@@ -31,27 +32,6 @@ const ProjectCard = ({ title, description, techStack, link }) => {
 };
 
 export const Projects = () => {
-  const projects = [
-    {
-      title: "Personal Portfolio",
-      description: "Personal Portfolio Website showcasing all the needed information for any company or person in order to consider hiring me. Developed as the first project to showcase my skills.",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      link: "https://chirang56me.netlify.app/"
-    },
-    {
-      title: "E-commerce Website",
-      description: "A user-friendly online shopping platform with a secure payment gateway.",
-      techStack: ["React.js", "Tailwind CSS", "MySQL", "Node.js", "Express.js", "Stripe", "Firebase"],
-      link: "https://matdash-frontend.vercel.app/"
-    },
-    {
-      title: "Butwal Fiber & Metal Industry",
-      description: "A responsive website showcasing Butwal Fiber & Metal Industry's products and services.",
-      techStack: ["Next.js", "Tailwind CSS", "Node.js", "Express.js", "MySQL"],
-      link: "https://gautam-steelworks.vercel.app/en"
-    },
-  ];
-
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
       <div className="max-w-5xl mx-auto px-4">
@@ -61,8 +41,8 @@ export const Projects = () => {
           </h2>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-full">
+          {PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}
               title={project.title}
